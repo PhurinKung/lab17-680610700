@@ -1,4 +1,4 @@
-import { Fragment, useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { PlusCircle, Plus, X, RotateCcw } from "lucide-react";
 import {
@@ -9,18 +9,18 @@ import {
 } from "react-hook-form";
 
 import { Button } from "@/components/ui/button";
-import {
-  Combobox,
-  ComboboxChip,
-  ComboboxChips,
-  ComboboxChipsInput,
-  ComboboxContent,
-  ComboboxEmpty,
-  ComboboxItem,
-  ComboboxList,
-  ComboboxValue,
-  useComboboxAnchor,
-} from "@/components/ui/combobox";
+// import {
+//   Combobox,
+//   ComboboxChip,
+//   ComboboxChips,
+//   ComboboxChipsInput,
+//   ComboboxContent,
+//   ComboboxEmpty,
+//   ComboboxItem,
+//   ComboboxList,
+//   ComboboxValue,
+//   useComboboxAnchor,
+// } from "@/components/ui/combobox";
 import {
   Dialog,
   DialogContent,
@@ -33,7 +33,7 @@ import {
 import {
   Select,
   SelectContent,
-  SelectGroup,
+  // SelectGroup,
   SelectItem,
   SelectTrigger,
   SelectValue,
@@ -328,7 +328,7 @@ export function AddNewCourseDialog() {
                   <Field data-invalid={fieldState.invalid}>
                     <FieldLabel htmlFor="semester">ภาคการศึกษา</FieldLabel>
                     <RadioGroup 
-                      value={field.value} 
+                      value={field.value ?? ""}
                       onValueChange={field.onChange}
                       className="flex flex-row flex-wrap gap-4"
                     >
